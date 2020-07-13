@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var date = new Date();
+        var day = date.getDay();
+
+        // Array of days. 
+        var weekdays = ['Sunday', 'Monday', 'Tuesday',
+            'Wednesday', 'Thursday', 'Friday', 'Saturday'
+        ];
+        document.write("Today is : " + weekdays[day]);
+        document.write("<br/>");
+
+        // get hour value. 
+        var hours = date.getHours();
+
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        var minutes = date.getMinutes();
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+
+        var time = hours + " " + ampm + " : " + minutes +
+            " : " + date.getMilliseconds();
+
+        document.write("\tCurrent time is : " + time); 
+    </script>
+</body>
+
+</html>
